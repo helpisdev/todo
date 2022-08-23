@@ -84,8 +84,8 @@ extension FontSize on ResizableText {
   ]) {
     final _style = style ??
         ButtonStyle(
-          elevation: const MaterialStatePropertyAll(4),
-          padding: MaterialStatePropertyAll(
+          elevation: MaterialStateProperty.all(4),
+          padding: MaterialStateProperty.all(
             EdgeInsets.symmetric(
               horizontal: 2.5 * (Get.width / 200),
               vertical: Get.width / 200,
@@ -103,13 +103,13 @@ extension FontSize on ResizableText {
   TextButton toTextButton(VoidFunction onPressed, [ButtonStyle? style]) {
     final _style = style ??
         ButtonStyle(
-          textStyle: const MaterialStatePropertyAll(
-            TextStyle(
+          textStyle: MaterialStateProperty.all(
+            const TextStyle(
               decoration: TextDecoration.underline,
               fontStyle: FontStyle.italic,
             ),
           ),
-          padding: MaterialStatePropertyAll(
+          padding: MaterialStateProperty.all(
             EdgeInsets.symmetric(
               horizontal: 2.5 * (Get.width / 200),
               vertical: Get.width / 200,
