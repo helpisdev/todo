@@ -1,0 +1,90 @@
+include: package:very_good_analysis/analysis_options.3.0.1.yaml
+
+analyzer:
+  include: [ "lib/**", "test/step/**" ]
+  exclude:
+    - build/**
+    - lib/**.g.dart
+    - lib/**.gen.dart
+    - lib/**.widgetbook.dart
+    - test*/**_test.dart
+  language:
+    strict-casts: true
+    strict-raw-types: true
+  strong-mode:
+    implicit-casts: true
+    implicit-dynamic: true
+  errors:
+    always_declare_return_types: error
+    avoid_web_libraries_in_flutter: error
+    camel_case_types: error
+    dead_code: error
+    empty_statements: error
+    file_names: error
+    iterable_contains_unrelated_type: error
+    lines_longer_than_80_chars: error
+    list_remove_unrelated_type: error
+    missing_required_param: error
+    missing_return: error
+    no_duplicate_case_values: error
+    prefer_single_quotes: error
+    unrelated_type_equality_checks: error
+
+linter:
+  rules:
+    - always_declare_return_types: true
+    - always_require_non_null_named_parameters: true
+    - annotate_overrides: true
+    - avoid_annotating_with_dynamic: true
+    - avoid_bool_literals_in_conditional_expressions: true
+    - avoid_empty_else: true
+    - avoid_types_on_closure_parameters: true
+    - avoid_unnecessary_containers: true
+    - avoid_void_async: true
+    - avoid_web_libraries_in_flutter: true
+    - await_only_futures: true
+    - camel_case_types: true
+    - cancel_subscriptions: true
+    - close_sinks: true
+    - directives_ordering: true
+    - empty_statements: true
+    - file_names: true
+    - flutter_style_todos: true
+    - hash_and_equals: true
+    - iterable_contains_unrelated_type: true
+    - lines_longer_than_80_chars: true
+    - list_remove_unrelated_type: true
+    - no_duplicate_case_values: true
+    - no_logic_in_create_state: true
+    - non_constant_identifier_names: true
+    - omit_local_variable_types: true
+    - only_throw_errors: true
+    - package_api_docs: true
+    - package_prefixed_library_names: true
+    - prefer_const_constructors: true
+    - prefer_const_constructors_in_immutables: true
+    - prefer_const_declarations: true
+    - prefer_final_fields: true
+    - prefer_final_in_for_each: true
+    - prefer_final_locals: true
+    - prefer_if_null_operators: true
+    - prefer_null_aware_operators: true
+    - prefer_relative_imports: true
+    - prefer_single_quotes: true
+    - prefer_void_to_null: true
+    - public_member_api_docs: true
+    - sized_box_for_whitespace: true
+    - sort_child_properties_last: true
+    - test_types_in_equals: true
+    - throw_in_finally: true
+    - unawaited_futures: true
+    - unnecessary_await_in_return: true
+    - unnecessary_const: true
+    - unnecessary_new: true
+    - unnecessary_statements: true
+    - unnecessary_this: true
+    - unrelated_type_equality_checks: true
+    - unsafe_html: true
+    - use_key_in_widget_constructors: true
+    - use_super_parameters: true
+    - slash_for_doc_comments: false

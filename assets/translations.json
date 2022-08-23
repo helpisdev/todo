@@ -1,0 +1,66 @@
+{
+  "authError": {
+    "el": "Η σύνδεση απέτυχε.",
+    "en": "Authentication failed."
+  },
+  "el": {
+    "el": "Ελληνικά",
+    "en": "Greek"
+  },
+  "email": {
+    "el": "Email",
+    "en": "Email"
+  },
+  "emailAlreadyInUse": {
+    "el": "Το email σου είναι ήδη καταχωρημένο",
+    "en": "This email is already in use"
+  },
+  "emailHint": {
+    "el": "giannis100@gmail.com",
+    "en": "john100@gmail.com"
+  },
+  "emailValid": {
+    "el": "Το email σου πρέπει να έχει ορθή μορφή",
+    "en": "The email must be in valid format"
+  },
+  "en": {
+    "el": "Αγγλικά",
+    "en": "English"
+  },
+  "home": {
+    "el": "Αρχική",
+    "en": "Home"
+  },
+  "isRequired": {
+    "el": "@1 @2 είναι απαραίτητ@3.",
+    "en": "The @2 is required."
+  },
+  "language": {
+    "el": "Γλώσσα",
+    "en": "Language"
+  },
+  "lightTheme": {
+    "el": "Ανοιχτό θέμα",
+    "en": "Light theme"
+  },
+  "password": {
+    "el": "Κωδικ@1",
+    "en": "Password@1"
+  },
+  "passwordHint": {
+    "el": "rgTy423yt$r%AA",
+    "en": "rgTy423yt$r%AA"
+  },
+  "signIn": {
+    "el": "Συνδεθείτε",
+    "en": "Log in"
+  },
+  "signInWithEmail": {
+    "el": "Ή συνέχισε με το email σου",
+    "en": "Or sign in with your email"
+  },
+  "signOut": {
+    "el": "Αποσύνδεση",
+    "en": "Sign out"
+  }
+}
