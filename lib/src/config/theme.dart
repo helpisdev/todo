@@ -7,18 +7,18 @@ final ThemeData lightTheme = FlexThemeData.light(
   blendLevel: 30,
   appBarOpacity: 0.95,
   subThemesData: const FlexSubThemesData(
-    blendOnLevel: 30,
+    // blendOnLevel: 30,
     defaultRadius: 6,
-    unselectedToggleIsColored: true,
+    // unselectedToggleIsColored: true,
     fabRadius: 40,
     chipRadius: 12,
     bottomNavigationBarElevation: 5,
-    navigationBarIndicatorOpacity: 0.25,
+    // navigationBarIndicatorOpacity: 0.25,
     navigationBarLabelBehavior:
         NavigationDestinationLabelBehavior.onlyShowSelected,
   ),
-  keyColors: const FlexKeyColors(),
-  tones: FlexTones.vividSurfaces(Brightness.light),
+  // keyColors: const FlexKeyColors(),
+  // tones: FlexTones.vividSurfaces(Brightness.light),
   visualDensity: FlexColorScheme.comfortablePlatformDensity,
 );
 
@@ -31,19 +31,19 @@ final ThemeData darkTheme = FlexThemeData.dark(
   appBarOpacity: 0.90,
   appBarElevation: 5,
   subThemesData: const FlexSubThemesData(
-    blendOnLevel: 30,
+    // blendOnLevel: 30,
     defaultRadius: 6,
-    unselectedToggleIsColored: true,
+    // unselectedToggleIsColored: true,
     fabRadius: 40,
     chipRadius: 12,
     bottomNavigationBarElevation: 5,
-    navigationBarIndicatorOpacity: 0.25,
+    // navigationBarIndicatorOpacity: 0.25,
     navigationBarLabelBehavior:
         NavigationDestinationLabelBehavior.onlyShowSelected,
   ),
-  keyColors: const FlexKeyColors(
-    keepTertiaryContainer: true,
-  ),
-  tones: FlexTones.vividSurfaces(Brightness.dark),
+  // keyColors: const FlexKeyColors(
+  //   keepTertiaryContainer: true,
+  // ),
+  // tones: FlexTones.vividSurfaces(Brightness.dark),
   visualDensity: FlexColorScheme.comfortablePlatformDensity,
 );
