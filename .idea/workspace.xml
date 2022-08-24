@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12ee7397-5aa8-46cf-b091-89b8cda32a76" name="Changes" comment="" />
+    <list default="true" id="12ee7397-5aa8-46cf-b091-89b8cda32a76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/todo.time" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/todo.time" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="o5p9gmo8" />
   </component>
   <component name="ProjectId" id="2Dl76T2SD9tSh6qKa2CIngmVzYC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,6 +29,7 @@
     <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GitStage.ChangesTree.GroupingKeys" value="directory&#10;module&#10;repository" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
@@ -56,6 +63,38 @@
       <option name="presentableId" value="Default" />
       <updated>1661261642686</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix: Due to dependency constraints flex_color_scheme automatically rolls back to a previous version where certain properties aren't yet available, hence commented out.">
+      <created>1661340857240</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661340857240</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Add gitignore.">
+      <created>1661340931835</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661340931835</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix: Due to dependency constraints flex_color_scheme automatically rolls back to a previous version where certain properties aren't yet available, hence commented out." />
+    <MESSAGE value="feat: Add gitignore." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add gitignore." />
   </component>
 </project>
