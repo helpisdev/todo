@@ -16,9 +16,6 @@ class RealmController extends GetxController {
   /// Open realm for the current user.
   Rx<Realm>? _realm;
 
-  /// Realm app flexible sync configuration
-  Configuration? _config;
-
   @override
   void onInit() {
     super.onInit();
@@ -112,7 +109,7 @@ class RealmController extends GetxController {
   /// Opens a realm for the current user
   Future<Rx<Realm>?> open({required User? user}) async {
     if (user != null) {
-      _config ??= Configuration.flexibleSync(
+      final config = Configuration.flexibleSync(
         user,
         schema,
         // path: await _absolutePath('db_${user.id}.realm'),
@@ -120,26 +117,27 @@ class RealmController extends GetxController {
           clientResetHandler,
         ),
       );
-      _realm = Realm(_config!).obs;
+      logger('path: ${config.path}');
+      // Realm.deleteRealm(config.path);
+      _realm = Realm(config).obs;
 
       if (_realm != null) {
-        unawaited(
-          (() async {
-            logger('Starting download...');
-            await realm!.syncSession.waitForDownload();
-            logger('Downloaded');
-            logger('Starting upload...');
-            await realm!.syncSession.waitForUpload();
-            logger('Uploaded');
-          })(),
-        );
-        realm!.subscriptions.update((MutableSubscriptionSet sub) {
-          sub.add(realm!.all<Todo>());
+        final r = realm!; // let's ensure we are working on a single realm
+        r.subscriptions.update((MutableSubscriptionSet sub) {
+          sub.add(r.all<Todo>());
         });
         logger('Starting sync...');
         try {
-          await realm!.subscriptions.waitForSynchronization().timeout(
-            const Duration(seconds: 25),
+          // not sure why you want to wait for this?
+          await r.subscriptions
+              .waitForSynchronization() // first sync subscriptions
+              .then((_) => Future.wait([
+                    // download/upload (any order will)
+                    r.syncSession.waitForDownload(),
+                    r.syncSession.waitForUpload(),
+                  ]))
+              .timeout(
+            const Duration(seconds: 25), // one timeout for all steps
             onTimeout: () async {
               logger('Sync failed.');
               Get.showSnackbar(
@@ -150,11 +148,14 @@ class RealmController extends GetxController {
                 ),
               );
               close();
-              await user.logOut();
-              throw Exception('Cannot sync.');
+              await user.logOut(); // why logout? ..
+              throw Exception('Cannot sync.'); // .. this is just a timeout
             },
           );
           logger('Synced.');
+          // There is nothing to sync.. are permissions correct on backend?
+          // final result = r.all<Todo>();
+          // logger('result: ${result.join()}'); // outputs: 'result: '
         } catch (err) {
           logger(err.toString());
         }
